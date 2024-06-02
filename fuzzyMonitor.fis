@@ -13,24 +13,24 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='Resolusi'
-Range=[0 4000]
+Range=[720 4000]
 NumMFs=2
-MF1='rendah':'trapmf',[0 0 720 4000]
-MF2='tinggi':'trapmf',[720 4000 4000 4000]
+MF1='rendah':'trimf',[720 720 4000]
+MF2='tinggi':'trimf',[720 4000 4000]
 
 [Input2]
 Name='refreshrate'
-Range=[0 240]
+Range=[75 240]
 NumMFs=2
-MF1='rendah':'trapmf',[0 0 75 240]
-MF2='tinggi':'trapmf',[75 240 240 240]
+MF1='rendah':'trimf',[75 75 240]
+MF2='tinggi':'trimf',[75 240 240]
 
 [Output1]
 Name='harga'
-Range=[0 5000000]
+Range=[600000 5000000]
 NumMFs=2
-MF1='murah':'trapmf',[0 0 600000 5000000]
-MF2='mahal':'trapmf',[600000 5000000 5000000 5000000]
+MF1='murah':'trimf',[600000 600000 5000000]
+MF2='mahal':'trimf',[600000 5000000 5000000]
 
 [Rules]
 2 2, 2 (1) : 1
