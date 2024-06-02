@@ -129,8 +129,8 @@ resolusi1 = str2num(get(handles.resolusi,'String'));
 refrate = str2num(get(handles.refreshrate,'String'));
 
 % Validasi nilai resolusi
-if resolusi1 < 720 || resolusi1 > 4000
-    errordlg('Resolusi harus antara 720 dan 4000', 'Input Error');
+if resolusi1 < 720 || resolusi1 > 4320
+    errordlg('Resolusi harus antara 720 dan 4320', 'Input Error');
     return;
 end
 
@@ -161,7 +161,9 @@ function reset_Callback(hObject, eventdata, handles)
 % hObject    handle to reset (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+set(handles.resolusi, 'String', '');
+set(handles.refreshrate, 'String', '');
+set(handles.edit3, 'String', '');
 
 
 function edit3_Callback(hObject, eventdata, handles)
