@@ -13,10 +13,10 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='Resolusi'
-Range=[720 4000]
+Range=[720 4320]
 NumMFs=2
-MF1='rendah':'trimf',[720 720 4000]
-MF2='tinggi':'trimf',[720 4000 4000]
+MF1='rendah':'trimf',[720 720 4320]
+MF2='tinggi':'trimf',[720 4320 4320]
 
 [Input2]
 Name='refreshrate'
