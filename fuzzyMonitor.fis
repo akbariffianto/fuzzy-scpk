@@ -1,0 +1,39 @@
+[System]
+Name='fuzzyMonitor'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Resolusi'
+Range=[0 4000]
+NumMFs=2
+MF1='rendah':'trapmf',[0 0 720 4000]
+MF2='tinggi':'trapmf',[720 4000 4000 4000]
+
+[Input2]
+Name='refreshrate'
+Range=[0 240]
+NumMFs=2
+MF1='rendah':'trapmf',[0 0 75 240]
+MF2='tinggi':'trapmf',[75 240 240 240]
+
+[Output1]
+Name='harga'
+Range=[0 5000000]
+NumMFs=2
+MF1='murah':'trapmf',[0 0 600000 5000000]
+MF2='mahal':'trapmf',[600000 5000000 5000000 5000000]
+
+[Rules]
+2 2, 2 (1) : 1
+2 1, 2 (1) : 1
+1 2, 1 (1) : 1
+1 1, 1 (1) : 1
